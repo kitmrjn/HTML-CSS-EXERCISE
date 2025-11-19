@@ -1,0 +1,104 @@
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+body{
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+button,
+label,
+input {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+p{
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    margin: 50px;
+}
+
+legend{
+    color: white;
+    background: black;
+    padding: 5px 10px;
+}
+
+label{
+    display: flex;
+    justify-content: space-between;
+}
+
+button{
+    width: 75%;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+input + span{
+    position: relative;
+}
+
+input:required + span:after{
+    content:"required";
+    position: absolute;
+    top: -56px;
+    right: 2px;
+    color: white;
+    background: black;
+    padding: 5px 10px;
+    font-size: 0.65rem;
+}
+
+input{
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+
+input + span:before{
+    position: absolute;
+    right: -18px;
+    top: -23px;
+}
+
+input:invalid{
+    border: 2px solid red;
+}
+
+input:invalid + span::before{
+    content: "✖";
+    color:   red;
+}
+
+input:valid {
+    border: 2px solid green;
+}
+
+input:valid + span::before{
+    content: "✓";
+    color: green;
+}
+
+input:out-of-range + span::after{
+    color: white;
+    background-color: red;
+    width: 155px;
+    content: "Outside the allowable range";
+}
