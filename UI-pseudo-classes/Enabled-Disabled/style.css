@@ -1,0 +1,75 @@
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap";
+
+*{
+    --disabled-color: rgb(172, 166, 166);
+    
+}
+
+body{
+    margin: 20px auto;
+    max-width: 500px;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+div{
+    display: flex;
+    justify-content: space-between;
+}
+
+legend{
+    background: black;
+    color: white;
+    padding: 6px 10px;
+}
+
+button,
+label,
+input[type="text"] {
+  display: block;
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px;
+  height: 30px;
+}
+
+input,
+button{
+    border: 2px solid gray;
+    border-radius: 3px;
+}
+
+
+
+button {
+    margin: 0 auto;
+    width: 55%;
+    padding: 5px;
+}
+
+input[type="text"]:disabled{
+    background:  #eeecec;
+    border: 1px solid var(--disabled-color);
+}
+
+label:has(+ :disabled){
+    color: var(--disabled-color);
+}
+
+
