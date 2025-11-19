@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Only Read Write</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Check shipping details</legend>
+                <div>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name" name="name" value="Mr Soft" readonly>
+               </div>
+               <div>
+                    <label for="address1">Address: </label>
+                    <textarea name="address1" id="address1" readonly>Blk 35 lot 29, Citadel Residences, Pulo Cabuyao, Laguna"</textarea>
+               </div>
+               <div>
+                <label for="zipcode1">Zip/postal code: </label>
+                <input type="number" name="zipcode1" id="zipcode1" value="40273" readonly>
+               </div>
+        </fieldset>
+        <fieldset>
+            <legend>Final Instructions</legend>
+            
+            <div>
+                <label for="instructions-checkbox">Send confirmation by SMS?</label>
+                <input type="checkbox" name="checkbox" id="instructions-checkbox">
+            </div>
+
+            <div>
+                <label for="instructions">Any special instructions?</label>
+                <textarea name="instructions" id="instructions"></textarea>
+            </div>
+        </fieldset>
+        
+        <div>
+            <button type="button">Amend Details</button>
+        </div>
+            
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
