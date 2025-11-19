@@ -1,0 +1,39 @@
+body{
+    max-width: 460px;
+}
+
+fieldset{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input[type="radio"] {
+    appearance: none;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    vertical-align: -5px;
+}
+
+input[type="radio"]::before {
+    display: block;
+    content: " ";
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+    background-color: red;
+    font-size: 1.2em;
+    transform: translate(3px, 3px) scale(0);
+    transform-origin: center;
+    transition: all 0.3s ease-in;
+}
+
+input[type="radio"]:checked::before {
+    transform: translate(3px, 3px) scale(1);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
