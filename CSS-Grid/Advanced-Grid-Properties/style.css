@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(2, min(200px, 50%)) / repeat(auto-fill, minmax(120px, 1fr));
+    text-align: center;
+    gap: 4px;
+    background-color: skyblue;
+    padding: 4px;
+    resize: both;
+    overflow: auto;
+    place-content: center;
+    /**place-items: end  start;**/
+}
+
+.item {
+    background-color: rgb(54, 50, 50);
+    color: white;
+    place-self: center;
+}
+
+img {
+    height: 60px;
+}
+
+p {
+    margin: 12px auto 24px;
+}
